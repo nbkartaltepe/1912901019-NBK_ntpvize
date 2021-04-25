@@ -2,3 +2,4 @@
 Nesne Tabanlı Proglama Xml veri okuma ödevi
 1912901019
 Naci Berkay Kartaltepe
+Sputnik Haber sitesi kullanıldı.
