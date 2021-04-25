@@ -23,7 +23,7 @@ namespace _1912901019_NBK_ntpvize
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            XmlTextReader xmlokuma = new XmlTextReader("https://tr.sputniknews.com/export/rss2/archive/index.xml"); // xmltextreader ile web site üzerinden xml verisini xmlokuma ya çekildi.
         }
     }
 }
