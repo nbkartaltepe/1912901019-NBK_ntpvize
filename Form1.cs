@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Timers; //timer kütüphanesi eklendi.
 using System.Xml; // xml kütüphanesi eklendi.
-using System.IO; // txt yazırdırmak için ıo kütüphanesi eklendi.
+using System.IO; // txt yazırdırmak için IO kütüphanesi eklendi.
 
 namespace _1912901019_NBK_ntpvize
 {
@@ -24,6 +24,13 @@ namespace _1912901019_NBK_ntpvize
         private void button1_Click(object sender, EventArgs e)
         {
             XmlTextReader xmlokuma = new XmlTextReader("https://tr.sputniknews.com/export/rss2/archive/index.xml"); // xmltextreader ile web site üzerinden xml verisini xmlokuma ya çekildi.
+            while (xmlokuma.Read()) // xmlokuma yı while döngüsüne aldım.
+            {
+                if (xmlokuma.Name == "title" || xmlokuma.Name == "description" || xmlokuma.Name == "pubDate") // if döngüsünde xmlokuma içerisinde title, description, pubdate başlıkları seçildi.
+                {
+                    listBox1.Items.Add(xmlokuma.ReadString()); // xmlokuma ya çekilen verileri listbox a aktarıldı.
+                }
+            }
         }
     }
 }
