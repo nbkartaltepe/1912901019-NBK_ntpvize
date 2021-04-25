@@ -36,5 +36,10 @@ namespace _1912901019_NBK_ntpvize
             }
             System.IO.File.WriteAllText(@"C:\Users\MONSTER\source\repos\1912901019-NBK_ntpvize\haberler.txt", veri); // system IO ile veri değişkeni içerisindekileri belirtilen dosya yolundaki txt formatındaki dosya içerisine yazdırıldı.
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString(); // timer ile güncel tarih ve saati label a yazdırıldı.
+        }
     }
 }
