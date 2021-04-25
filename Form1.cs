@@ -25,6 +25,7 @@ namespace _1912901019_NBK_ntpvize
         {
             XmlTextReader xmlokuma = new XmlTextReader("https://tr.sputniknews.com/export/rss2/archive/index.xml"); // xmltextreader ile web site üzerinden xml verisini xmlokuma ya çekildi.
             string veri = ""; // veri adında değişken oluşturdum.
+            listBox1.Items.Clear(); // listbox a tekrar tekrar xmlokuma dakiler yazılmaması için clear eklendi.
             while (xmlokuma.Read()) // xmlokuma yı while döngüsüne aldım.
             {
                 if (xmlokuma.Name == "title" || xmlokuma.Name == "description" || xmlokuma.Name == "pubDate") // if döngüsünde xmlokuma içerisinde title, description, pubdate başlıkları seçildi.
