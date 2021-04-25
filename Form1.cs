@@ -20,7 +20,8 @@ namespace _1912901019_NBK_ntpvize
         {
             InitializeComponent();
         }
-        int sayac;
+        int sayac; // sayac adında int değer oluşturuldu.
+
         void kod() // içerisindeki uzun kodu daha kısa şekilde çağırmak için eklendi.
         {
             XmlTextReader xmlokuma = new XmlTextReader("https://tr.sputniknews.com/export/rss2/archive/index.xml"); // xmltextreader ile web site üzerinden xml verisini xmlokuma ya çekildi.
@@ -36,6 +37,7 @@ namespace _1912901019_NBK_ntpvize
             }
             System.IO.File.WriteAllText(@"C:\Users\MONSTER\source\repos\1912901019-NBK_ntpvize\haberler.txt", veri); // system IO ile veri değişkeni içerisindekileri belirtilen dosya yolundaki txt formatındaki dosya içerisine yazdırıldı.
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             kod(); // kod sınıfını çağırmak için eklendi.
